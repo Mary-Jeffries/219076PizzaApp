@@ -1,0 +1,26 @@
+﻿<!--Mary Jeffries
+    Feb 14 2020
+    App to order Pizza
+    --> 
+    <Window x:Class="_219076PizzaApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_219076PizzaApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="475" Width="800" FontSize="30" Background="DarkGray">
+    <StackPanel>
+        <CheckBox x:Name="chkBoxMushrooms" IsChecked="False">Mushrooms</CheckBox>
+        <CheckBox x:Name="chkBoxPineapple" IsChecked="False">Pineapple</CheckBox>
+        <Label>What country?</Label>
+        <ComboBox x:Name="comboCountry" SelectionChanged="comboCountry_SelectionChanged"> 
+            <ComboBoxItem IsSelected="True">Canada</ComboBoxItem>
+            <ComboBoxItem>USA</ComboBoxItem> 
+        </ComboBox>
+        <RadioButton x:Name="rbPickUp" GroupName="OrderType" Checked="rbPickUp_Checked">Pick up</RadioButton>
+        <RadioButton x:Name="rbDelivery" GroupName="OrderType" Checked="rbDelivery_Checked">Delivery</RadioButton>
+        <Button x:Name="btnOrder" Click="btnOrder_Click" FontSize="50" Background="DarkSlateBlue" >Order Pizza</Button>
+        <Label x:Name="lblOutput"></Label>
+    </StackPanel>  
+</Window>
